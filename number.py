@@ -113,14 +113,16 @@ class Number:
         returns: list
         """
         s=[int(i) for i in str(self.value)]
-        return max(s)
+        return s
+        
     def get_max(self):
         """
         Returns the largest digit in the number.
 
         returns: int
         """
-        
+        s=[int(i) for i in str(self.value)]
+        return max(s)
 
     def get_min(self):
         """
@@ -128,7 +130,8 @@ class Number:
 
         returns: int
         """
-        pass
+        s=[int(i) for i in str(self.value)]
+        return min(s)
 
     def get_average(self):
         """
