@@ -112,8 +112,8 @@ class Number:
 
         returns: list
         """
-        pass
-
+        s=[int(i) for i in str(self.value)]
+        return max(s)
     def get_max(self):
         """
         Returns the largest digit in the number.
