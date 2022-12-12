@@ -139,7 +139,8 @@ class Number:
 
         returns: float
         """
-        pass
+        s=[int(i) for i in str(self.value)]
+        return sum(s)/len(s)
 
     def get_median(self):
         """
