@@ -9,7 +9,7 @@ class Number:
 
         returns: int
         """
-        pass
+        return self.value
 
     def is_odd(self):
         """
@@ -18,7 +18,7 @@ class Number:
         returns: bool
 
         """
-        pass
+        return self.value%2!=0
 
     def is_even(self):
         """
@@ -26,7 +26,7 @@ class Number:
 
         returns: bool
         """
-        pass
+        return self.value%2==0
 
     def is_prime(self):
         """
@@ -34,7 +34,15 @@ class Number:
 
         returns: bool
         """
-        pass
+        num=self.value
+        ans = False
+        if num > 1:
+            for i in range(2, num):
+                if (num % i) == 0:
+                    ans = True
+                    break
+        return ans
+        
 
     def get_divisors(self):
         """
@@ -42,7 +50,15 @@ class Number:
 
         returns: list
         """
-        pass
+        num=self.value
+
+        s=1
+        m=[]
+        while num!=s:
+            if num%s==0:
+                m.append(s)
+            s+=1
+        print(m)
 
     def get_length(self):
         """
@@ -50,7 +66,7 @@ class Number:
 
         returns: int
         """
-        pass
+        return len(self.value)
 
     def get_sum(self):
         """
@@ -58,7 +74,13 @@ class Number:
 
         returns: int
         """
-        pass
+        num=self.value
+        s=0
+        while num!=0:
+            s+=num%10
+            num=num//10
+        return s
+        
 
     def get_reverse(self):
         """
@@ -66,7 +88,8 @@ class Number:
 
         returns: int
         """
-        pass
+        num = self.value
+        return int(str(num)[::-1])
 
     def is_palindrome(self):
         """
@@ -74,7 +97,14 @@ class Number:
 
         returns: bool
         """
-        pass
+        str=self.value
+        for i in range(0, len(str)//2):
+            if str[i] != str[len(str)-i-1]:
+                return False
+           
+        # If the above loop doesn't
+        #return then it is palindrome
+        return True
 
     def get_digits(self):
         """
@@ -90,7 +120,7 @@ class Number:
 
         returns: int
         """
-        pass
+        
 
     def get_min(self):
         """
